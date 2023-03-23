@@ -115,6 +115,7 @@ const App = () => {
         openModal={openModal}
         handleDelete={handleDelete}
         handleSort={handleSort}
+        order={order} // Hozzáadjuk az order prop-ot a MoviesTable komponenshez
       />
 
       <MovieModal
