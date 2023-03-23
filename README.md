@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+- A tesztfeladatban filmekkel fogsz dolgozni. A feladatleírás mellé csatoltunk egy "movies.json" nevű fájlt, amelyben megtalálhatók a feladathoz szükséges adatok.
+- Teljesen rád van bízva, hogy milyen technológiák segítségével oldod meg a feladatot, de pozitívum, ha az általunk is használt eszközöket választod (react, typescript, html, css, scss).
+- Third-party library-k szabadon használhatók.
+- A feladatok egyre nehezednek. A cél, hogy minél többet megoldj belőlük!
+- A legfontosabb szempont, hogy az elkészült funkciók megfelelően működjenek, de törekedj a külalakra is, próbálj meg minél átláthatóbb/tetszetősebb felületet létrehozni!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+01. Készíts egy táblázatot, amelynek a következő oszlopai vannak:
+	- Cím
+	- Hossz
+	- Megjelenés dátuma
+	- Értékelés
 
-## Available Scripts
+02. A táblázatot töltsd fel a mellékelt "movies.json" fájlból kinyert adatokkal:
+	- Cím: "Title"
+	- Hossz: "Running_Time_min"
+	- Megjelenés dátuma: "Release_Date"
+	- Értékelés: "IMDB_Rating"
+	
+03. A táblázat páros sorai legyenek kiemelve eltérő háttérszínnel.
 
-In the project directory, you can run:
+04. Legyen kiemelve eltérő háttérszínnel az a sor, amely fölé az egeret mozgatjuk.
 
-### `npm start`
+05. Amennyiben egy filmnek nincs elérhető "Értékelése", a cellában jeleníts meg egy "—" karaktert.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+06. Az "Értékelés" legyen színezve az értéke szerint:
+	- 1-4: piros
+	- 4-7: fekete
+	- 7-10: zöld
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+07. Egy sorra kattintva jelenítsd meg megformázva az adott film további tulajdonságait a táblázat fölött:
+	- Rendező: "Director"
+	- Forgalmazó: "Distributor"
+	- Költségvetés: "Production_Budget"
+	- Összbevétel: "Worldwide_Gross"
+	
+08. A kiválasztott film sora legyen kiemelve eltérő háttérszínnel.
+Másik sorra kattintva frissítsük a részletezőt az újonnan kiválasztott film adataival.
+Amennyiben a már kiválasztott sorra kattintunk ismét, a részletező tűnjön el.
+	
+09. Tagolással jelenítsd meg a részletezőben a "Költségvetés" és "Összbevétel" tulajdonságokat (pl. 1234567 -> 1.234.567).
 
-### `npm test`
+10. Tedd a táblázat sorait törölhetővé. A sorok végére kerüljön egy újabb cella, melyben legyen egy törlés gomb. A gombra kattintva tűnjön el az adott sor.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+11. Kerüljön fel a felületre egy "Újratöltés" gomb, aminek megnyomására ismét legyenek láthatók az előzőleg kitörölt sorok.
 
-### `npm run build`
+12. Kerüljön fel a felületre egy szabadszavas kereső, valamint mellé egy "Keresés" és egy "Keresés törlése" gomb.
+A "Keresés" gombra nyomva csak azok a filmek jelenjenek meg a táblázatban, melyek címében bárhol megtalálható a keresőbe beírt kifejezés.
+A "Keresés törlése" gombra jelenjen meg ismét minden sor.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+13. A részletezőt ne a táblázat fölött, hanem egy Modal ablakon jelenítsd meg.
+A modal-on legyen fejlécként feltűntetve a megnyitott film címe is.
+A modal aljára kerüljön fel egy "Bezárás" gomb, aminek megnyomására záródjon be a modal.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+14. A modal-on legyen egy "Előző film" és egy "Következő film" gomb. Az "Előző film" gombra nyomva töltsd be a megnyitott film helyére a listában előtte szereplő filmet, a "Következő film" gombra nyomva pedig a következőt.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+15. Tedd a táblázatot rendezhetővé "Cím" szerinti növekvő-, valamint "Értékelés" szerinti csökkenő sorrendbe.
+Az adott tulajdonság szerinti rendezés az oszlop fejlécére kattintva történjen meg.
 
-### `npm run eject`
+16. Tedd a táblázatot lapozhatóvá. Egy oldalon 50 elem jelenjen meg. Egy lapozó segítségével lehessen az oldalak között előre és hátra haladni.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+17. Töltsd fel az elkészült projektet egy tetszőleges git repository-ba, ami elérhető számunkra is.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Amennyiben a 17. feladat nem sikerül, az elkészült feladatot egy zip fájlba csomagolva juttasd el hozzánk.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Sok sikert!
